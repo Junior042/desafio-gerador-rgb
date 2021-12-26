@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>Desafio</title>
+</head>
+<body>
+    <main>
+        <h1>Gerador RGB</h1>
+        
+        <div class="data">
+            <p></p>
+        </div>
+
+        <div class="cont-geral">
+                <div id="cont-inputs">
+                    <span id="cont-input-1">
+                        <input type="range" min="0" max="255" value="126.5" steps="1" oninput="pegavalor()" id="input-1">
+                    </span>
+                    <span id="cont-input-2">
+                        <input type="range" min="0" max="255" value="126.5" steps="1" oninput="pegavalor()" id="input-2">
+                    </span>
+                    <span id="cont-input-3">
+                        <input type="range" min="0" max="255" value="126.5" steps="1" oninput="pegavalor()" id="input-3">
+                    </span>
+                </div>
+                <div id="mostraRes"></div>
+                <p id="rbga-res">rgba(255, 255, 255)</p>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
