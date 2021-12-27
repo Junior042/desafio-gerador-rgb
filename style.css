@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'IBM Plex Mono';
     text-align: center;
     color: white;
 }
@@ -21,14 +21,18 @@ main{
 .data{
     margin: 20px 0px;
     background: #44474e;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 1% 16%;
+    width: 50%;
+    height: 40px;
+    gap: 8px;
 }
 
 .cont-geral{
     background: #44474e;
-    padding: 10% 2%;
+    width: 50%;
+    padding: 0px 0px 20px 0px;
 }
 
 #cont-input-1{
@@ -61,4 +65,27 @@ main{
     background: white;
     border-radius: 50%;
     margin: 20px auto 40px auto;
+}
+
+footer{
+    font-size: 14px;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .data{
+        width: 80%;
+    }
+    .cont-geral{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .data{
+        width: 90%;
+    }
+    .cont-geral{
+        width: 90%;
+    }
 }

@@ -2,18 +2,19 @@ let res = document.querySelector('#mostraRes')
 let resRgb = document.querySelector('#rbga-res')
 let mostraData = document.querySelector('.data p')
 
-let data = new Date();
-let dia = data.getDate();
-let mes = data.getMonth() + 1;
-let ano = data.getFullYear();
-let hora = data.getHours();
-let min = data.getMinutes();
-if(hora <= 9)
-{
-    hora = `0${hora}`
+horarios();
+setInterval(horarios, 6000)
+
+function horarios(){
+    let data = new Date();
+    let hora = data.getHours();
+    let min = data.getMinutes();
+    hora <= 9 && (hora = `0${hora}`);
+    min <= 9 && (min = `0${min}`);
+
+    mostraData.innerText = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} - ${hora}:${min}`;
 }
 
-mostraData.innerText = `${dia}/${mes}/${ano} - ${hora}:${min}`;
 
 function pegavalor() {
     let input1 = document.querySelector('#input-1').value;

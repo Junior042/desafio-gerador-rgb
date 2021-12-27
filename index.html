@@ -9,7 +9,7 @@
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
     <title>Desafio</title>
 </head>
@@ -17,11 +17,16 @@
     <main>
         <h1>Gerador RGB</h1>
         
-        <div class="data">
+        <header class="data">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eyedropper"
+                viewBox="0 0 16 16">
+                <path
+                    d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.853a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708l-2-2zM2 12.707l7-7L10.293 7l-7 7H2v-1.293z" />
+            </svg>
             <p></p>
-        </div>
+        </header>
 
-        <div class="cont-geral">
+        <section class="cont-geral">
                 <div id="cont-inputs">
                     <span id="cont-input-1">
                         <input type="range" min="0" max="255" value="126.5" steps="1" oninput="pegavalor()" id="input-1">
@@ -35,8 +40,12 @@
                 </div>
                 <div id="mostraRes"></div>
                 <p id="rbga-res">rgba(255, 255, 255)</p>
-        </div>
+        </section>
 
+        <footer>
+            <p>Uma aplicação para gerar cores RGB</p>
+            <p>Feito por: <a href="https://www.linkedin.com/in/eduardo-alves-de-oliveira-junior-46b668208/">Edu.Jr🍃</a></p>           
+        </footer>
     </main>
     <script src="script.js"></script>
 </body>
