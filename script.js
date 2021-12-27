@@ -1,26 +1,26 @@
-let res = document.querySelector('#mostraRes')
-let resRgb = document.querySelector('#rbga-res')
-let mostraData = document.querySelector('.data p')
+const Display_RESULTADO = document.querySelector('#mostraRes')
+const Resultado_RGB = document.querySelector('#rbga-res')
+const Mostra_DATA = document.querySelector('.data p')
 
-horarios();
-setInterval(horarios, 6000)
+Data_Hora();
+setInterval(Data_Hora, 6000)
 
-function horarios(){
-    let data = new Date();
-    let hora = data.getHours();
-    let min = data.getMinutes();
-    hora <= 9 && (hora = `0${hora}`);
-    min <= 9 && (min = `0${min}`);
+function Data_Hora(){
+    const Nova_Data = new Date();
+    let HORA = Nova_Data.getHours();
+    let MINUTOS = Nova_Data.getMinutes();
+    HORA <= 9 && (HORA = `0${HORA}`);
+    MINUTOS <= 9 && (MINUTOS = `0${MINUTOS}`);
 
-    mostraData.innerText = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} - ${hora}:${min}`;
+    Mostra_DATA.innerText = `${Nova_Data.getDate()}/${Nova_Data.getMonth() + 1}/${Nova_Data.getFullYear()} - ${HORA}:${MINUTOS}`;
 }
 
 
 function pegavalor() {
-    let input1 = document.querySelector('#input-1').value;
-    let input2 = document.querySelector('#input-2').value;
-    let input3 = document.querySelector('#input-3').value;
+    const INPUT_1 = document.querySelector('#input-1').value;
+    const INPUT_2 = document.querySelector('#input-2').value;
+    const INPUT_3 = document.querySelector('#input-3').value;
 
-    res.style.background = `rgb(${input1}, ${input2}, ${input3})`;
-    resRgb.innerText = `rgb(${input1}, ${input2}, ${input3})`;
+    Display_RESULTADO.style.background = `rgb(${INPUT_1}, ${INPUT_2}, ${INPUT_3})`;
+    Resultado_RGB.innerText = `rgb(${INPUT_1}, ${INPUT_2}, ${INPUT_3})`;
 }
